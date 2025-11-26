@@ -122,3 +122,5 @@ Containers allow you to log into multiple accounts on the same site simultaneous
 Workspaces are visual contexts for switching between different projects or modes.
 *   **Tools**: `createWorkspace`, `switchWorkspace`, `moveTabsToWorkspace`.
 *   **Structure**: Each workspace maintains its own list of tabs and folders, but can share Containers (e.g., use your "Work Container" inside your "Project A Workspace").
+
+Feel free to ask any questions or reach out if you have any suggestions or feedback! 🚀
