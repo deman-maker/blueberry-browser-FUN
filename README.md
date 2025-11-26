@@ -4,7 +4,7 @@
 https://github.com/user-attachments/assets/947e3ccc-0ff9-49d0-a51d-0d47884e5f0a
 
 
-Blueberry Browser is a privacy-first, AI-powered browser environment designed to intelligently organize your digital workspace. It leverages a multi-tier routing system, utilizing **Flan-T5** and local Small Language Models (SLMs), along with a semantic Knowledge Graph to manage tabs, workspaces, and containers with minimal latency and maximum privacy.
+Blueberry Browser Intelligent Tab Management is a privacy-first, AI-powered browser tab management system that intelligently organizes your tabs. It leverages a multi-tier routing system, utilizing **Flan-T5** and local Small Language Models (SLM), along with a semantic Knowledge Graph to manage tabs, workspaces, and containers with minimal latency and maximum privacy.
 
 ## 🚀 Key Features
 
