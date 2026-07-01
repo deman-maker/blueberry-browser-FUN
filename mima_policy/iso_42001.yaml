@@ -1,0 +1,16 @@
+name: "ISO 42001 AI Management System"
+framework: iso_42001
+version: "1.0"
+
+assertions:
+  - type: min_readiness_pct
+    threshold: 70
+    description: "ISO 42001 readiness must reach 70%"
+
+  - type: record_type_present
+    record_type: ai_risk_assessment
+    description: "AI risk assessment required for ISO 42001 clause 6.1"
+
+  - type: record_type_present
+    record_type: model_evaluation
+    description: "Model evaluation required for ISO 42001 clause 6.3"
