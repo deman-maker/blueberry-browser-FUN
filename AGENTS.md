@@ -20,10 +20,21 @@ Before shipping any code that calls an AI/LLM provider:
 <!-- mima:unregistered-systems -->
 Currently unregistered systems detected in this repo:
 - Browser Sidebar Chat Assistant
-- Natural Language Tab Command Processor
-- Intelligent Tab Grouping Router
-- Local Tab Grouping AI (Flan-T5-Small)
-- Local SLM Query Analyser (Phi-3.5-mini / Qwen2.5-1.5B)
+- Natural Language Tab Command Service
+- AI Tab Grouping Suggester (Flan-T5-Small + Knowledge Graph)
+- Intelligent Query Router
+- On-Device SLM Reasoning Engine (Phi-3.5-mini / Qwen2.5-1.5B)
+<!-- /mima:unregistered-systems -->
+
+<!-- mima:missing-controls -->
+Missing controls:
+- Tab management actions (close, pin, group, create) are executed immediately upon AI tool call with no confirmation dialog or undo prompt shown to the user before execution — add a confirmation step before destructive actions like closing multiple tabs.
+- No rate limiting or abuse prevention on the IPC 'sidebar-chat-message' handler — a malicious renderer could flood the LLM endpoint.
+- Screenshots and full page text (potentially containing passwords, PII, or sensitive content) are sent to a third-party LLM API without user consent disclosure or opt-out mechanism.
+<!-- /mima:missing-controls -->
+
+Run `mima posture` to see the full compliance picture.
+
 <!-- /mima:unregistered-systems -->
 
 <!-- mima:missing-controls -->
