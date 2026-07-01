@@ -1,0 +1,26 @@
+## Mima AI Governance
+
+This repository is monitored by [Mima AI Governance](https://governance.mima.ai).
+
+Before shipping any code that calls an AI/LLM provider:
+1. Ensure the system is registered: `mima list-systems`
+2. Push attestation: `mima push human_oversight --system <system_name> --reviewer your@email.com`
+3. Check gate status: `mima gates check`
+
+<!-- mima:unregistered-systems -->
+Currently unregistered systems detected in this repo:
+- Browser Sidebar Chat Assistant
+- Natural Language Tab Command Service
+- AI Tab Grouping Suggester (TabGroupingAI / Flan-T5-Small)
+- Intelligent Query Router (IntelligentRouter)
+- On-Device SLM Reasoning Engine (SLMRouter / Phi-3.5-mini)
+<!-- /mima:unregistered-systems -->
+
+<!-- mima:missing-controls -->
+Missing controls:
+- AI-initiated tab actions (close, pin, group, create) are executed immediately without a confirmation dialog or undo prompt presented before execution — the user has no pre-execution review gate.
+- Page screenshots and full page text are sent to a third-party LLM API (Google/Anthropic/OpenAI) without explicit per-session user consent or disclosure in the UI.
+- No rate-limiting or scope restriction prevents the assistant from closing all open tabs in a single tool call.
+<!-- /mima:missing-controls -->
+
+Run `mima posture` to see the full compliance picture.
