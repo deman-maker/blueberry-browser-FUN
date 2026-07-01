@@ -1,0 +1,21 @@
+name: "EU AI Act Art.9 Readiness"
+framework: eu_ai_act
+version: "1.0"
+
+assertions:
+  - type: min_readiness_pct
+    threshold: 80
+    description: "EU AI Act readiness must reach 80%"
+
+  - type: record_type_present
+    record_type: ai_risk_assessment
+    description: "At least one AI risk assessment must be on record"
+
+  - type: record_type_present
+    record_type: human_oversight
+    description: "At least one human oversight decision must be on record"
+
+  - type: scan_coverage
+    min_pct: 80
+    path: "."
+    description: "80% of AI call sites must be attested"
